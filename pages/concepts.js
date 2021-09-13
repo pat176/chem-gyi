@@ -3,7 +3,9 @@ import Card from "../components/Card/Card"
 function Concepts(props) {
   const [state, setstate] = useState([])
   useEffect(() => {
-    setstate([...JSON.parse(localStorage.getItem("concepts"))])
+    if (localStorage.getItem("concepts") !== null) {
+      setstate([...JSON.parse(localStorage.getItem("concepts"))])
+    }
     console.log(state)
   }, [])
   return (

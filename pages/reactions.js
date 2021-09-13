@@ -3,7 +3,9 @@ import Card from "../components/Card/Card"
 function Reactions(props) {
   const [state, setstate] = useState([])
   useEffect(() => {
-    setstate([...JSON.parse(localStorage.getItem("reactions"))])
+    if (localStorage.getItem("reactions") !== null) {
+      setstate([...JSON.parse(localStorage.getItem("reactions"))])
+    }
   }, [])
   return (
     <div>
