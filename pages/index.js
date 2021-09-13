@@ -110,9 +110,9 @@ export default function Home() {
               <label htmlFor="from">Enter the Reactant:</label>
               <input type="text" name="from" id="from" value={rea.reactant} onChange={() => handleChange("rea", "reactant")} />
               <label htmlFor="to">Enter the Product:</label>
-              <input type="text" name="to" id="to" value={rea.reagent} onChange={() => handleChange("rea", "reagent")} />
+              <input type="text" name="to" id="to" value={rea.product} onChange={() => handleChange("rea", "product")} />
               <label htmlFor="reagent">Enter the Reagent:</label>
-              <input type="text" name="reagent" id="reagent" value={rea.product} onChange={() => handleChange("rea", "product")} />
+              <input type="text" name="reagent" id="reagent" value={rea.reagent} onChange={() => handleChange("rea", "reagent")} />
               <textarea name="desc" rows="10" cols="30" placeholder="Some Additional Info. Eg: Heat?, Sunlight?" value={rea.desc} onChange={() => handleChange("rea", "desc")}>
               </textarea>
               <button type="submit">Add</button>
