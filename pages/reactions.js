@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Card from "../components/Card/Card"
-function reactions(props) {
+function Reactions(props) {
   const [state, setstate] = useState([])
   useEffect(() => {
     setstate([...JSON.parse(localStorage.getItem("reactions"))])
@@ -14,4 +14,4 @@ function reactions(props) {
 
   )
 }
-export default reactions
+export default Reactions

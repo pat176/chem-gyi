@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Card from "../components/Card/Card"
-function concepts(props) {
+function Concepts(props) {
   const [state, setstate] = useState([])
   useEffect(() => {
     setstate([...JSON.parse(localStorage.getItem("concepts"))])
@@ -15,4 +15,4 @@ function concepts(props) {
 
   )
 }
-export default concepts
+export default Concepts
