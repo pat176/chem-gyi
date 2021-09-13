@@ -26,8 +26,12 @@ export default function Home() {
   // this useEffect will run once
   // similar to componentDidMount()
   useEffect(() => {
-    setReaArr([...JSON.parse(localStorage.getItem("reactions"))])
-    setConArr([...JSON.parse(localStorage.getItem("concepts"))])
+    if (localStorage.getItem("reactions") !== null) {
+      setReaArr([...JSON.parse(localStorage.getItem("reactions"))])
+    }
+    if (localStorage.getItem("concepts") !== null) {
+      setConArr([...JSON.parse(localStorage.getItem("concepts"))])
+    }
   }, [])
 
   const handleChange = (type, name) => {
